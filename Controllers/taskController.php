@@ -12,7 +12,7 @@ if(isset($_POST["save-task"])){
     if ($result) {
         header("Location:" . INDEX_PATH . "index.php");
         $_SESSION['message'] = 'Task Saved Succesfully';
-        $_SESSION['message_type'] = 'Success';
+        $_SESSION['message_type'] = 'success';
         
     } else {
         $_SESSION['error_message'] = 'check the data';

@@ -14,7 +14,7 @@ define('CONTROLLER_PATH', "../CRUD_PHP/Controllers/");
                 <div class="row">
                     <div class="col">
                         <?php if (isset($_SESSION['message'])) { ?>
-                        <div class="alert alert-success" role="alert">
+                        <div class="alert alert-<?= $_SESSION['message_type'] ?>" role="alert">
                             <strong><?= $_SESSION['message'] ?></strong>
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
