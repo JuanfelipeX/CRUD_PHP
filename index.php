@@ -6,7 +6,7 @@ define('CONTROLLER_PATH', "../CRUD_PHP/Controllers/");
 ?>
 
 
-<div class="container p-4">
+<div class="container p-4 ">
     <div class="row">
         <div class="col">
             <!-- INPUT SECTION -->
@@ -55,11 +55,18 @@ define('CONTROLLER_PATH', "../CRUD_PHP/Controllers/");
                 <tbody>
                     <?php
                     $query = "SELECT * FROM task";
-                    
-                    ?>
+                    $results_tasks = mysqli_query($connection, $query);
+
+                    while ($row = mysqli_fetch_array($results_tasks)) { ?>
                     <tr>
-                        <td>@mdo</td>
+                        <td><?php echo $row['title'] ?></td>
+                        <td><?php echo $row['description'] ?></td>
+                        <td><?php echo $row['created_at'] ?></td>
+                        <td><a href="/Views/Pages/edit.php?id=<?php echo $row['id'] ?>">Edit</a></td>
+                        <td><a href="/Views/Pages/delete-task.php?id=<?php echo $row['id'] ?>">Delete</a></td>
                     </tr>
+                    <?php } ?>
+
                 </tbody>
             </table>
         </div>
