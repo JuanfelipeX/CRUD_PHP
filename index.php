@@ -21,7 +21,7 @@ define('CONTROLLER_PATH', "../CRUD_PHP/Controllers/");
                         <?php session_unset();
                         } ?>
                         <div class="card card-body">
-                            <form action="<?php echo CONTROLLER_PATH; ?>taskController.php" method="POST">
+                            <form action="<?php echo CONTROLLER_PATH; ?>createController.php" method="POST">
                                 <div class="mb-3">
                                     <label for="title-input" class="form-label">Task Title</label>
                                     <input type="text" class="form-control" id="title-input" name="title-input"
@@ -63,9 +63,9 @@ define('CONTROLLER_PATH', "../CRUD_PHP/Controllers/");
                         <td><?php echo $row['description'] ?></td>
                         <td><?php echo $row['created_at'] ?></td>
                         <td>
-                            <a href="../CRUD_PHP/Views/Pages/edit.php?id=<?php echo $row['id'] ?>"><i
+                            <a href="../CRUD_PHP/Controllers/editController.php?id=<?php echo $row['id'] ?>"><i
                                     class="fa-solid fa-pen-to-square"></i></a>
-                            <a href="../CRUD_PHP/Views/Pages/delete-task.php?id=<?php echo $row['id'] ?>"><i
+                            <a href="../CRUD_PHP/Controllers/deleteController.php?id=<?php echo $row['id'] ?>"><i
                                     class="fa-solid fa-trash-can"></i></a>
                         </td>
                     </tr>

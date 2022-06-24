@@ -1,7 +1,7 @@
 <?php
 include("/../xampp/htdocs/CRUD_PHP/Models/connection.php");
 
-define('INDEX_PATH', "../../");
+define('INDEX_PATH', "../");
 define('CONTROLLER_PATH', "../CRUD_PHP/Controllers/");
 
 if (isset($_GET['id'])) {

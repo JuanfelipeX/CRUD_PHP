@@ -1,6 +1,6 @@
 <?php
 include("/../xampp/htdocs/CRUD_PHP/Models/connection.php");
-define('CONTROLLER_PATH', "../CRUD_PHP/Controllers/");
+
 define('INDEX_PATH', "../");
 
 if(isset($_POST["save-task"])){
