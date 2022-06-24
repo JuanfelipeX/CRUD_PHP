@@ -70,7 +70,6 @@ define('CONTROLLER_PATH', "../CRUD_PHP/Controllers/");
                         </td>
                     </tr>
                     <?php } ?>
-
                 </tbody>
             </table>
         </div>
