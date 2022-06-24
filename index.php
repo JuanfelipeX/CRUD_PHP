@@ -62,8 +62,12 @@ define('CONTROLLER_PATH', "../CRUD_PHP/Controllers/");
                         <td><?php echo $row['title'] ?></td>
                         <td><?php echo $row['description'] ?></td>
                         <td><?php echo $row['created_at'] ?></td>
-                        <td><a href="/Views/Pages/edit.php?id=<?php echo $row['id'] ?>">Edit</a></td>
-                        <td><a href="/Views/Pages/delete-task.php?id=<?php echo $row['id'] ?>">Delete</a></td>
+                        <td>
+                            <a href="../CRUD_PHP/Views/Pages/edit.php?id=<?php echo $row['id'] ?>"><i
+                                    class="fa-solid fa-pen-to-square"></i></a>
+                            <a href="../CRUD_PHP/Views/Pages/delete-task.php?id=<?php echo $row['id'] ?>"><i
+                                    class="fa-solid fa-trash-can"></i></a>
+                        </td>
                     </tr>
                     <?php } ?>
 
